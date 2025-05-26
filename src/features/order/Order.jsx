@@ -2,7 +2,7 @@ import {
   calcMinutesLeft,
   formatCurrency,
   formatDate,
-} from "../../utils/helpers";
+} from "../../utilits/helpers";
 
 const order = {
   id: "ABCDEF",
@@ -11,6 +11,7 @@ const order = {
   address: "Arroios, Lisbon , Portugal",
   priority: true,
   estimatedDelivery: "2027-04-25T10:00:00",
+  status: "preparing",
   cart: [
     {
       pizzaId: 7,
