@@ -15,7 +15,7 @@ export default function SearchOrder() {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className="rounded-sm p-1"
+        className="rounded-lg bg-yellow-100 px-2 py-1 text-sm placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-500"
         placeholder="Search order #"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
