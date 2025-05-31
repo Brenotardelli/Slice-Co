@@ -10,6 +10,8 @@ export default function Button({ children, disabled, to, type }) {
 
   const styles = {
     primary: base + " px-4 py-3",
+    secondary:
+      "inline-block border-2 border-stone-300  rounded-lg font-semibold uppercase tracking-wide text-stone-500 shadow-md transition-colors duration-300 hover:bg-stone-100 focus:outline-none focus:ring focus:ring-stone-700 focus:ring-offset-2 px-4 py-2.5 disabled:cursor-not-allowed",
     small: base + " p-2 text-xs",
   };
 
