@@ -39,24 +39,26 @@ function CreateOrder() {
   const cart = fakeCart;
 
   return (
-    <div>
-      <h2>Ready to order? Let's go!</h2>
+    <div className="px-4 py-6">
+      <h2 className="mb-8 text-xl font-semibold">Ready to order? Let's go!</h2>
 
       <Form method="POST">
-        <div>
+        <div className="mb-5 flex flex-col gap-1">
           <label>First Name</label>
           <input className="input" type="text" name="customer" required />
         </div>
 
         <div>
           <label>Phone number</label>
-          <div>
+          <div className="mb-5 flex flex-col gap-1">
             <input className="input" type="tel" name="phone" required />
+            {formErrors?.phone && (
+              <p className="mt-1 text-xs text-red-600">{formErrors.phone}</p>
+            )}
           </div>
-          {formErrors?.phone && <p>{formErrors.phone}</p>}
         </div>
 
-        <div>
+        <div className="mb-5 flex flex-col gap-1">
           <label>Address</label>
           <div>
             <input className="input" type="text" name="address" required />
@@ -75,7 +77,7 @@ function CreateOrder() {
           <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
-        <div>
+        <div className="mt-2">
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
           <Button disabled={isSubmitting} type="primary">
             {isSubmitting ? "Processing order..." : "Order Now"}
